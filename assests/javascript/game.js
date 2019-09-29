@@ -10,7 +10,7 @@ var goalNum = 0;
 // });
 
 function reset(){
-    //setting goalNum to random number between 19 -120.
+    //setting goalNum to random number between 19-120.
     goalNum = setGoalNum(19,120);
     currentTotal = 0;
 }
@@ -21,6 +21,9 @@ function setGoalNum(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 
-  goalNum = setGoalNum(19,120);
-  console.log(goalNum);
-  console.log(wins);
+
+//   $(".green-rupee").on("click", function{
+
+//   });
+  //game start
+  reset();
