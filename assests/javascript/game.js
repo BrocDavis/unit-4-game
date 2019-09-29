@@ -20,3 +20,7 @@ function setGoalNum(min, max) {
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
+
+  goalNum = setGoalNum(19,120);
+  console.log(goalNum);
+  console.log(wins);
