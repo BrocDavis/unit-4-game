@@ -21,7 +21,7 @@ $(".blue-rupee").click(function () {
     winCheck();
 });
 $(".purple-rupee").click(function () {
-    currentTotal += ;
+    currentTotal += 4;
     winCheck();
 });
 
