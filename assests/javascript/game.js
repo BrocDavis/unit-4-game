@@ -11,9 +11,10 @@ var cyrstalNum = [];
 
 function reset() {
     //setting goalNum to random number between 19-120.
-    goalNum = setGoalNum(19, 120);
-    currentTotal = 0;
-    $(".current-total").html(currentTotal);
+    $(".total-number").text(goalNum = setGoalNum(19, 120));
+    $(".current-total").text(currentTotal = 0);
+    $(".loss-count").text(losses);
+    $(".win-count").text(wins);
 }
 //sets goalNum to random number  
 function setGoalNum(min, max) {
@@ -22,7 +23,7 @@ function setGoalNum(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 function updateDisplay(){
-    $(".current-total").html(currentTotal);
+    $(".current-total").text(currentTotal);
 }
 
 $(".green-rupee").click(function () {
