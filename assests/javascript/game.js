@@ -22,8 +22,15 @@ function setGoalNum(min, max) {
   }
 
 
-//   $(".green-rupee").on("click", function{
+  $(".green-rupee").click(function(){
+currentTotal += 1;
+console.log(currentTotal);
+  });
 
-//   });
+  if(currentTotal > goalNum){
+      losses++;
+
+  }
+
   //game start
   reset();
