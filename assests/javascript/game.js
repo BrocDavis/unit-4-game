@@ -2,35 +2,53 @@ var wins = 0;
 var losses = 0;
 var currentTotal = 0;
 var goalNum = 0;
-
+var cyrstalNum = [];
 
 // $(document).ready(function() {
- 
- 
+
+
 // });
 
-function reset(){
+function reset() {
     //setting goalNum to random number between 19-120.
-    goalNum = setGoalNum(19,120);
+    goalNum = setGoalNum(19, 120);
     currentTotal = 0;
+    $(".current-total").html(currentTotal);
 }
-  //sets goalNum to random number  
+//sets goalNum to random number  
 function setGoalNum(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
+}
+function updateDisplay(){
+    $(".current-total").html(currentTotal);
+}
+
+$(".green-rupee").click(function () {
+    currentTotal += 1;
+    updateDisplay();
+});
+$(".red-rupee").click(function () {
+    currentTotal += 2;
+    updateDisplay();``
+});
+$(".blue-rupee").click(function () {
+    currentTotal += 3;
+    updateDisplay();
+});
+$(".purple-rupee").click(function () {
+    currentTotal += 4;
+    updateDisplay();
+});
 
 
-  $(".green-rupee").click(function(){
-currentTotal += 1;
-console.log(currentTotal);
-  });
+if (currentTotal > goalNum) {
+    losses++;
+}
+else if(currentTotal < goalNum){
+    // updateDisplay();
+}
 
-  if(currentTotal > goalNum){
-      losses++;
-
-  }
-
-  //game start
-  reset();
+//game start
+reset();
