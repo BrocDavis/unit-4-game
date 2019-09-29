@@ -9,19 +9,19 @@ $(document).ready(function() {
 reset();
 
 $(".green-rupee").click(function () {
-    currentTotal += 1;
+    currentTotal += crystalNum[0];
     winCheck();
 });
 $(".red-rupee").click(function () {
-    currentTotal += 2;
+    currentTotal += crystalNum[1];
     winCheck();
 });
 $(".blue-rupee").click(function () {
-    currentTotal += 3;
+    currentTotal += crystalNum[2];
     winCheck();
 });
 $(".purple-rupee").click(function () {
-    currentTotal += 4;
+    currentTotal += crystalNum[3];
     winCheck();
 });
 
@@ -40,6 +40,10 @@ $(".purple-rupee").click(function () {
 //setting goalNum to random number between 19-120.
 function reset() {
     $(".total-number").text(goalNum = setRandomNum(19, 120));
+    crystalNum[0] = setRandomNum(1,12);
+    crystalNum[1] = setRandomNum(1,12);
+    crystalNum[2] = setRandomNum(1,12);
+    crystalNum[3] = setRandomNum(1,12);
     $(".current-total").text(currentTotal = 0);
     $(".loss-count").text(losses);
     $(".win-count").text(wins);
